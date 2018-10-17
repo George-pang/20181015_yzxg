@@ -1,0 +1,380 @@
+@fSize_s:14px;
+@fSize_m:16px;
+@fSize_l:18px;
+@nav_bgC: #2d72fc;
+@fColor:#fff;
+
+/*公用样式：header和footer样式*/
+    /* 版心样式 */
+    *{
+        box-sizing: border-box;
+    }
+    .w{
+        width: 1190px;
+        margin: 0 auto;
+    }
+    html{   //网页内容竖向超出显示滚动条，横向超出隐藏--否则网页右侧出现空白条
+        overflow-y:scroll; overflow-x:hidden;
+    }
+    body{
+        padding-top: 70px; 
+        font-family: PingFang-SC-Medium;
+        font-size: @fSize_s;
+        // background-color: #f5f7ff;
+    }
+    input,textarea{
+        outline: none;
+    }
+    input::-webkit-input-placeholder {
+        color: #999 !important;
+    }
+
+    input:-moz-placeholder {
+        color: #999 !important;
+    }
+
+    input::-moz-placeholder {
+        color: #999 !important;
+
+    }
+
+    input:-ms-input-placeholder {
+        color: #999 !important;
+    }
+
+    .common-header{
+        overflow: hidden;
+        .top-nav{
+            position: relative;
+            height: 70px;
+            line-height: 70px;
+            background-color: @nav_bgC;
+            .nav{
+                // position: absolute;
+                // top: 0;
+                // left: 50%;
+                // transform: translateX(-50%);
+                .l-logo{
+                    float: left;
+                    cursor: pointer;
+                    img{
+                        vertical-align: middle;
+                    }
+                }
+                .r-nav{
+                    float: right;
+                    position: relative;
+                    // overflow: hidden;
+                    .nav-list{
+                        float: left;
+                        margin-right: 143px;
+                        // overflow: hidden;
+                        .nav-item{
+                            float: left;
+                            position: relative;
+                            margin-right: 60px;
+                            padding:0 3px;
+                            font-size:@fSize_m;
+                            color: @fColor;
+                            cursor: pointer;
+                            a{
+                                display: block;
+                                color: @fColor;
+                            }
+                            &:nth-child(5){
+                                margin-right: 0;
+                            }
+                            .line{
+                                position: absolute;
+                                display: none;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                width: 100%;
+                                height: 2px;
+                                background-color: #fff;
+                            }
+                            .li-current{
+                                display: block;
+                            }
+                        }
+                        .fw {
+                            .fw-menu{
+                                position: absolute;
+                                display: none;
+                                bottom: 0;
+                                left: 50%;
+                                transform: translate(-50%,100%);
+                                z-index: 999;
+                                .triangle-up{
+                                    position: absolute;
+                                    top: 0;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    width: 0;
+                                    height: 0;
+                                    border-left: 10px solid transparent;
+                                    border-right: 10px solid transparent;
+                                    border-bottom: 10px solid #fff;
+                                }
+                                .fw-list{
+                                    margin-top: 10px;
+                                    padding: 25px 0;
+                                    background-color: #fff;
+                                    .fw-item{
+                                        height: auto;
+                                        margin-top: 25px;
+                                        a{
+                                            display: block;
+                                            padding: 0 18px;
+                                            font-size:@fSize_m;
+                                            color: #666!important;
+                                            line-height: 1em;
+                                            white-space: nowrap;
+                                        }
+                                        &:nth-child(1){
+                                            margin-top: 0;
+                                        }
+                                    }
+                                }
+                            }
+    
+                        }
+                    }
+                    .submit-btn{
+                        float: left;
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        transform: translateY(-50%);
+                        padding: 7px 18px;
+                        font-size:@fSize_m;
+                        color: @fColor;
+                        line-height: 1em;
+                        border-radius: 4px;
+                        border: solid 1px #ffffff;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+        }
+        .fix-nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .swiper-container {
+            // height: 590px;
+            .swiper-pagination{
+                .swiper-pagination-bullet{
+                    width: 80px;
+                    height: 6px;
+                    background-color: #ffffff;
+                    border-radius: 3px;
+                    opacity: 0.38;
+                }
+                .swiper-pagination-bullet-active{
+                    background-color: #f7faff;
+                    opacity: 1;
+                }
+            }
+        }  
+    }
+    .common-footer{
+        .contact-us{
+            position: relative;
+            height: 406px;
+            background: url("../img/img_21.jpg") no-repeat;
+            background-size: cover;
+            .inner-box{
+                position: absolute;
+                top: 63px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: #fff;
+                text-align: center;
+                .ch-title{
+                    font-size: 30px;
+                } 
+                .en-title{
+                    font-family: HelveticaNeueDeskInterface-MediumP4;
+                    font-size: 24px;
+                }
+                .desc{
+                    margin-top: 39px;
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                }
+                .submit-btn{
+                    margin: 59px auto 0;
+                    width: 188px;
+                    height: 48px;
+                    line-height: 48px;
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    background-color: #fcc12a;
+                    border-radius: 2px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .friendLink{
+            height: 340px;
+            padding-top: 60px;
+            background-color: #fff; 
+            box-sizing: border-box;
+            .link-item{
+                float: left;
+                width: 20%;
+                h4{
+                    font-family: PingFang-SC-Bold;
+                    font-size: 16px;
+                    color: #666666;
+                }
+                ul{
+                    margin-top: 28px;
+                    li{
+                        margin-top: 14px;
+                        font-size: 14px;
+                        color: #666;
+                        a{
+                            font-size: 14px;
+                            color: #666;
+                        }
+                        h4{
+                            font-family: PingFang-SC-Bold;
+                            font-size: 14px;
+                            color: #666;
+                        }
+                        &:nth-child(1){
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 联系我们-提交需求--弹窗样式
+    .popup-wrapper{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        // opacity: 0.59;
+        z-index: 1000;
+        .popup{
+            position: absolute;
+            bottom: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 721px;
+            background-color: #fff;
+            border-radius: 5px;
+            border: solid 1px #fff;
+            opacity: 1;
+            .popup-content{
+                width: 100%;
+                height: 100%;
+                .popup-title{
+                    position: relative;
+                    padding: 25px 0;
+                    text-align: center;
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 1px;
+                        background-color: #e2e2e2;
+                    }
+                    span{
+                        font-size: 24px;
+                        letter-spacing: 1px;
+                        color: #333333;
+                    }
+                }
+                .popup-form{
+                    .xq-form{
+                        padding: 40px 32px 60px;
+                        .form-item{
+                            margin-top: 30px;
+                            &:nth-child(1){
+                                margin-top: 0;
+                            }
+                            .item-name{
+                                display: inline-block;
+                                margin-right: 30px;
+                                padding: 10px 0;
+                                width: 70px;
+                                font-size: 16px;
+                                line-height: 1.5em;
+                                letter-spacing: 0px;
+                                color: #333333;
+                                text-align: justify;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                vertical-align: top;
+                            }
+                            .item-content{
+                                width: 548px;
+                                padding: 10px 15px;
+                                font-size: 16px;
+                                line-height: 1.5em;
+                                letter-spacing: 0px;
+                                color: #666666;
+                                border: solid 1px #e8e8e8;
+                                box-sizing: border-box;
+                                vertical-align: top;
+                            }
+                            textarea{
+                                height: 110px;
+                            }
+                            input{
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                        }
+                        .submit{
+                            margin-top: 40px;
+                            .sub-btn{
+                                margin: 0 auto;
+                                width: 188px;
+                                height: 48px;
+                                line-height: 48px;
+                                font-size: 18px;
+                                background-color: #2d72fc;
+                                border-radius: 2px;
+                                text-align: center;
+                                color: #fff;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+            .close-btn{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                // transform: translateY(-100%);
+                cursor: pointer;
+                img{
+                    width: 32px;
+                    height: auto;
+                    vertical-align: top;
+                }
+
+            }
+        }
+    }
