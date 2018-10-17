@@ -145,6 +145,9 @@ input:-ms-input-placeholder {
   width: 100%;
   z-index: 1000;
 }
+.common-header .swiper-container .swiper-slide {
+  text-align: center;
+}
 .common-header .swiper-container .swiper-pagination .swiper-pagination-bullet {
   width: 80px;
   height: 6px;
