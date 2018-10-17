@@ -155,7 +155,6 @@
             }
             .hy-case-list {
                 margin-top: 80px;
-                overflow: hidden;
                 .hy-case {
                     float: left;
                     margin-right: 25px;
@@ -163,6 +162,7 @@
                     height: 330px;
                     padding: 30px 20px;
                     border: solid 1px #e7e7e7;
+                    cursor: pointer;
                     &:nth-child(3) {
                         margin-right: 0;
                     }
@@ -197,6 +197,17 @@
                     }
                 }
             }
+            .clearfix:after {
+                content: "";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+            .clearfix {
+                *zoom: 1;
+            }
+            /* IE6、7 专有 */
         }
     }
 }

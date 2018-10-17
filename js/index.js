@@ -73,51 +73,42 @@ $(function () {
             el: '#swiper-pagination',
             clickable :true,
         },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
         autoplay: {
-            delay: 3000
+            delay: 3000,
+            disableOnInteraction: false, //设置为false，用户操作swiper之后自动切换不会停止，每次都会重新启动autoplay。
         },
 
     });
     var mySwiper2 = new Swiper('#swiper2', {
-        direction: 'horizontal', // 垂直切换选项
-        loop: true, // 循环模式选项
-
-        // 如果需要分页器
+        direction: 'horizontal', 
+        loop: true, 
         pagination: {
             el: '#case-swiper-pagination',
             clickable :true,
         },
         autoplay: {
-            delay: 3000
+            delay: 3000,
+            disableOnInteraction: false,
         },
 
     });
-    var mySwiper3 = new Swiper('#we-swiper', {
-        direction: 'horizontal', // 垂直切换选项
-        loop: true, // 循环模式选项
 
-        // 如果需要分页器
-        pagination: {
-            el: '#we-swiper-pagination',
-            clickable :true,
-        },
-        autoplay: {
-            delay: 3000
-        },
-
+    //鼠标移入轮播图暂停自动播放、显示滑块控制
+    $(".swiper-container").on("mouseenter",function(event){
+            mySwiper.autoplay.stop();
+            $(".swiper-button-next").fadeIn(1000);
+            $(".swiper-button-prev").fadeIn(1000);
+            return false;
     });
-    
-    //点击轮播图分页器控制切换后重新开始延时自动切换
-    function reAutoplay(ele,swiper){
-        ele.on("click",function(){
-            swiper.autoplay.start();
-        });
-    }
-    reAutoplay($("#swiper-pagination"),mySwiper);
-    reAutoplay($("#case-swiper-pagination"),mySwiper2);
-    reAutoplay($("#we-swiper-pagination"),mySwiper3);
-
-
-
+    $(".swiper-container").on("mouseleave",function(event){
+        mySwiper.autoplay.start();
+        $(".swiper-button-next").fadeOut(1000);
+        $(".swiper-button-prev").fadeOut(1000);
+        return false;
+    });
 
 });

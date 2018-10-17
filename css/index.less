@@ -81,7 +81,7 @@
             padding: 110px 0 150px;
             .service-step {
                 margin-top: 100px;
-                overflow: hidden;
+                // overflow: hidden;
                 .left-box {
                     float: left;
                     width: 360px;
@@ -137,6 +137,17 @@
                     }
                 }
             }
+            .clearfix:after {
+                content: "";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+            .clearfix {
+                *zoom: 1;
+            }
+            /* IE6、7 专有 */
         }
         .column-case {
             padding: 129px 0 80px;

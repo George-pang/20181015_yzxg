@@ -74,10 +74,10 @@
 }
 .main .column-wrapper .column-step {
   padding: 110px 0 150px;
+  /* IE6、7 专有 */
 }
 .main .column-wrapper .column-step .service-step {
   margin-top: 100px;
-  overflow: hidden;
 }
 .main .column-wrapper .column-step .service-step .left-box {
   float: left;
@@ -132,6 +132,16 @@
   font-size: 18px;
   line-height: 30px;
   color: #666666;
+}
+.main .column-wrapper .column-step .clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.main .column-wrapper .column-step .clearfix {
+  *zoom: 1;
 }
 .main .column-wrapper .column-case {
   padding: 129px 0 80px;

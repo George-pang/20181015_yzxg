@@ -130,6 +130,9 @@
   color: #666666;
   text-align: center;
 }
+.fw_app_main .column-wrapper .column-hy-case {
+  /* IE6、7 专有 */
+}
 .fw_app_main .column-wrapper .column-hy-case .desc-txt {
   margin-top: 90px;
 }
@@ -145,7 +148,6 @@
 }
 .fw_app_main .column-wrapper .column-hy-case .hy-case-list {
   margin-top: 80px;
-  overflow: hidden;
 }
 .fw_app_main .column-wrapper .column-hy-case .hy-case-list .hy-case {
   float: left;
@@ -154,6 +156,7 @@
   height: 330px;
   padding: 30px 20px;
   border: solid 1px #e7e7e7;
+  cursor: pointer;
 }
 .fw_app_main .column-wrapper .column-hy-case .hy-case-list .hy-case:nth-child(3) {
   margin-right: 0;
@@ -184,6 +187,16 @@
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+}
+.fw_app_main .column-wrapper .column-hy-case .clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.fw_app_main .column-wrapper .column-hy-case .clearfix {
+  *zoom: 1;
 }
 .fw_h5_main .column-wrapper .column-advantage .advantage-list {
   margin-top: 170px;

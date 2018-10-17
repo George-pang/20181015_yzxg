@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/fw.css">
+    <link rel="stylesheet" href="css/hover.css">
     <script src="js/jquery.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/index.js"></script>
@@ -56,7 +57,7 @@
                             <div class="line"></div>
                         </li>
                     </ul>
-                    <div class="submit-btn">
+                    <div class="submit-btn hvr-rectangle-out">
                         提交需求
                     </div>
                 </div>
@@ -70,6 +71,9 @@
             </div>
             <!-- 如果需要分页器 -->
             <div class="swiper-pagination" id="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
     <div class="main fw_app_main fw_wx_main">
@@ -101,7 +105,7 @@
                     <img src="img/img_1.png" alt="">
                 </div>
                 <ul class="why-list clearfix">
-                    <li class="why-item">
+                    <li class="why-item hvr-float-shadow">
                         <div class="why-icon">
                             <img src="img/icon_42.png" alt="">
                         </div>
@@ -114,7 +118,7 @@
                             成为目前的主流
                         </p>
                     </li>
-                    <li class="why-item">
+                    <li class="why-item hvr-float-shadow">
                         <div class="why-icon">
                             <img src="img/icon_43.png" alt="">
                         </div>
@@ -127,7 +131,7 @@
                             高
                         </p>
                     </li>
-                    <li class="why-item">
+                    <li class="why-item hvr-float-shadow">
                         <div class="why-icon">
                             <img src="img/icon_44.png" alt="">
                         </div>
@@ -140,7 +144,7 @@
                             一个产品可以比拟
                         </p>
                     </li>
-                    <li class="why-item">
+                    <li class="why-item hvr-float-shadow">
                         <div class="why-icon">
                             <img src="img/icon_45.png" alt="">
                         </div>
@@ -153,7 +157,7 @@
                             户需求
                         </p>
                     </li>
-                    <li class="why-item">
+                    <li class="why-item hvr-float-shadow">
                         <div class="why-icon">
                             <img src="img/icon_46.png" alt="">
                         </div>
@@ -165,7 +169,7 @@
                             户分类管理和营销
                         </p>
                     </li>
-                    <li class="why-item">
+                    <li class="why-item hvr-float-shadow">
                         <div class="why-icon">
                             <img src="img/icon_47.png" alt="">
                         </div>
@@ -190,7 +194,7 @@
                     <img src="img/img_1.png" alt="">
                 </div>
                 <ul class="achieve-list">
-                    <li class="achieve-item margin_r">
+                    <li class="achieve-item margin_r hvr-grow">
                         <a href="#">
                             <div class="left-icon">
                                 <img src="img/icon_48.png" alt="">
@@ -207,7 +211,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="achieve-item">
+                    <li class="achieve-item hvr-grow">
                         <a href="#">
                             <div class="left-icon">
                                 <img src="img/icon_49.png" alt="">
@@ -223,7 +227,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="achieve-item margin_r margin_top">
+                    <li class="achieve-item margin_r margin_top hvr-grow">
                         <a href="#">
                             <div class="left-icon">
                                 <img src="img/icon_50.png" alt="">
@@ -240,7 +244,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="achieve-item margin_top">
+                    <li class="achieve-item margin_top hvr-grow">
                         <a href="#">
                             <div class="left-icon">
                                 <img src="img/icon_51.png" alt="">
@@ -268,8 +272,7 @@
                     <img src="img/img_1.png" alt="">
                 </div>
                 <ul class="case-list clearfix">
-
-                    <li class="case-item">
+                    <li class="case-item hvr-float-shadow">
                         <a href="#">
                             <div class="case-pic">
                                 <img src="img/img_16.png" alt="">
@@ -284,7 +287,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="case-item">
+                    <li class="case-item hvr-float-shadow">
                         <a href="#">
                             <div class="case-pic">
                                 <img src="img/img_17.png" alt="">
@@ -299,7 +302,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="case-item">
+                    <li class="case-item hvr-float-shadow">
                         <a href="#">
                             <div class="case-pic">
                                 <img src="img/img_18.png" alt="">
@@ -314,7 +317,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="case-item">
+                    <li class="case-item hvr-float-shadow">
                         <a href="#">
                             <div class="case-pic">
                                 <img src="img/img_19.png" alt="">
@@ -345,7 +348,7 @@
                 <div class="desc">
                     提交您的需求，我们会在24小时内联系您，并提供产品咨询和项目报价！
                 </div>
-                <div class="submit-btn" id="submit-btn">
+                <div class="submit-btn hvr-bounce-to-right" id="submit-btn">
                     提交需求
                 </div>
             </div>
@@ -405,36 +408,36 @@
     </div>
     <!-- 联系我们-提交需求--弹窗 -->
     <div class="popup-wrapper">
-            <div class="popup">
-                <div class="popup-content">
-                    <div class="popup-title">
-                        <span>您的信任是我们最大的动力！优赞真诚为您服务!</span>
-                    </div>
-                    <div class="popup-form">
-                        <form action="" class="xq-form">
-                            <div class="form-item">
-                                <span class="item-name">联系人</span>
-                                <input class="item-content" type="text" name="username" id="username" placeholder="请输入您的姓名">
-                            </div>
-                            <div class="form-item">
-                                <span class="item-name">联系方式</span>
-                                <input class="item-content" type="text" name="phone" id="phone" placeholder="QQ/电话/或其他">
-                            </div>
-                            <div class="form-item">
-                                <span class="item-name">您的需求</span>
-                                <textarea class="item-content" name="userdemand" id="userdemand" style="resize:none"
-                                    placeholder="示例：我想做一款App，iOS和Android两个平台，现有产品需求文档，无设计，有参考App，功能与其一样即可。"></textarea>
-                            </div>
-                            <div class="submit">
-                                <div class="sub-btn">点击提交</div>
-                            </div>
-                        </form>
-                    </div>
+        <div class="popup">
+            <div class="popup-content">
+                <div class="popup-title">
+                    <span>您的信任是我们最大的动力！优赞真诚为您服务!</span>
                 </div>
-                <div class="close-btn">
-                    <img src="img/close.png" alt="">
+                <div class="popup-form">
+                    <form action="" class="xq-form">
+                        <div class="form-item">
+                            <span class="item-name">联系人</span>
+                            <input class="item-content" type="text" name="username" id="username" placeholder="请输入您的姓名">
+                        </div>
+                        <div class="form-item">
+                            <span class="item-name">联系方式</span>
+                            <input class="item-content" type="text" name="phone" id="phone" placeholder="QQ/电话/或其他">
+                        </div>
+                        <div class="form-item">
+                            <span class="item-name">您的需求</span>
+                            <textarea class="item-content" name="userdemand" id="userdemand" style="resize:none"
+                                placeholder="示例：我想做一款App，iOS和Android两个平台，现有产品需求文档，无设计，有参考App，功能与其一样即可。"></textarea>
+                        </div>
+                        <div class="submit">
+                            <div class="sub-btn">点击提交</div>
+                        </div>
+                    </form>
                 </div>
             </div>
+            <div class="close-btn">
+                <img src="img/close.png" alt="">
+            </div>
+        </div>
     </div>
 </body>
 
