@@ -12,7 +12,6 @@ html {
   overflow-x: hidden;
 }
 body {
-  padding-top: 70px;
   font-family: PingFang-SC-Medium;
   font-size: 14px;
 }
@@ -39,7 +38,7 @@ input:-ms-input-placeholder {
   position: relative;
   height: 70px;
   line-height: 70px;
-  background-color: #2d72fc;
+  background-color: transparent;
 }
 .common-header .top-nav .nav .l-logo {
   float: left;
@@ -125,7 +124,6 @@ input:-ms-input-placeholder {
   margin-top: 0;
 }
 .common-header .top-nav .nav .r-nav .submit-btn {
-  float: left;
   position: absolute;
   top: 50%;
   right: 0;
@@ -162,7 +160,6 @@ input:-ms-input-placeholder {
 .common-header .swiper-container .swiper-button-next,
 .common-header .swiper-container .swiper-button-prev {
   display: none;
-  top: 40%;
   width: 60px;
   height: 80px;
   background-color: rgba(255, 255, 255, 0.4);
